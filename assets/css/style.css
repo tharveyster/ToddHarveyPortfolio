@@ -1,0 +1,295 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background-color: #ccc;
+    font-size: 16px;
+    font-family: Verdana, Arial, sans-serif;
+    height: 100%;
+}
+
+p {
+    text-align: justify;
+}
+
+/* header section */
+header {
+    display: flex;
+    flex-direction: row;
+    height: 100px;
+    padding: 28px 10px;
+    color: #ccc;
+    background: url("../images/todd.jpg") no-repeat left top;
+    background-size: 100px;
+    background-color: #0a2c6b;
+}
+
+header h1 {
+    display: inline-block;
+    font-size: 42px;
+    padding-left: 100px;
+}
+
+/* navigation bar */
+nav {
+    display: flex;
+    flex: 1 1 40%;
+    justify-content: flex-end;
+    padding-top: 12px;
+    font-size: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+/* link formatting */
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: cornflowerblue;
+}
+
+/* space out paragraphs */
+p {
+    margin-bottom: 10px;
+}
+
+/* sets the width, display type, and padding for the main content */
+main {
+    width: 100%;
+    display: inline-block;
+    padding: 20px;
+}
+
+/* formatting for the about me, work, and contact me sections */
+.block-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+.block-title {
+    width: 20%;
+    border-right: 5px solid gray;
+    text-align: right;
+    padding: 0 20px 0 0 ;
+}
+
+.block-title h2 {
+    font-size: 28px;
+}
+
+.block-content {
+    width: 80%;
+    padding-left: 30px;
+}
+
+.block-content img {
+    display: block;
+    width: 100%;
+    opacity: 0.5;
+    transition: opacity 300ms linear;
+}
+
+.block-content img:hover {
+    opacity: 1.0;
+}
+
+/* formatting for the most recent project */
+.primary-project {
+    border: 5px solid #0a2c6b;
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* formatting for the remaining projects */
+.secondary-left-block {
+    width: 50%;
+    height: 80%;
+    padding: 0 10px 20px 0;
+    float: left;
+    clear: both;
+}
+
+.secondary-right-block {
+    width: 50%;
+    padding: 0  0 20px 10px;
+    float: right;
+}
+
+.secondary-project {
+    border: 5px solid #0a2c6b;
+    position: relative;
+}
+
+/* title bar that appears on each project */
+.project-title {
+    display: inline;
+    background-color: #0a2c6b;
+    color: #ccc;
+    position: absolute;
+    left: 0;
+    bottom: 20px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.project-title h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.project-title a {
+    color: lightskyblue;
+}
+
+.project-title a:hover {
+    color: lightyellow;
+}
+
+/* contact me section */
+.contact-info {
+    display: inline;
+}
+
+.contact-info span {
+    padding-bottom: 1px;
+    border-bottom: 3px solid gray;
+}
+
+.contact-info:not(:last-child) {
+    padding-right: 28px;
+}
+
+.contact-info a {
+    color: black;
+    text-decoration-color: gray;
+}
+
+.contact-info a:hover {
+    color: blue;
+}
+
+/* sets the footer formatting */
+footer {
+    padding: 10px 0 30px 0;
+    clear: both;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    /* stack header elements */
+    header {
+        flex-direction: column;
+        padding: 12px 10px;
+    }
+
+    header h1 {
+        text-align: center;
+    }
+
+    nav {
+        justify-content: center;
+        padding-left: 100px;
+        font-size: 16px;
+    }
+
+    nav ul li {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    /* reduce spacing between elements */
+    .block-title {
+        padding: 0 10px 0 0 ;
+    }
+    
+    .block-content {
+        padding-left: 10px;
+    }
+
+    .block-title h2 {
+        font-size: 18px;
+    }
+
+    /* stack projects */
+    .secondary-left-block {
+        width: 80%;
+        padding-right: 0;
+        float: none;
+    }
+    
+    .secondary-right-block {
+        width: 80%;
+        padding-left: 0;
+        float: none;
+    }
+    
+    .project-title {
+        font-size: 12px;
+    }
+
+    .project-title h3 {
+        font-size: 16px;
+    }
+
+    /* stack contact methods */
+    .contact-info {
+        display: block;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    /* reduce header elements to fit */
+    header {
+        padding: 20px 10px;
+    }
+
+    header h1 {
+        font-size: 30px;
+    }
+    
+    nav {
+        font-size: 14px;
+    }
+
+    nav ul li {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    /* reposition elements to best use available space */
+    .block-title {
+        width: 100%;
+        border-right: 0;
+        border-bottom: 5px solid gray;
+        text-align: left;
+        padding: 0 0 5px 0 ;
+        margin-bottom: 10px;
+    }
+
+    .block-content {
+        width: 100%;
+        padding-left: 0;
+    }
+}
