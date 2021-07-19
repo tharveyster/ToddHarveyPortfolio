@@ -17,6 +17,11 @@ body {
 
 p {
     text-align: justify;
+    line-height: 1.2em;
+}
+
+span {
+    line-height: 1.2em;
 }
 
 /* header section */
