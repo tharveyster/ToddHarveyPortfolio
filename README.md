@@ -1,7 +1,7 @@
 # Todd Harvey's Portfolio
 
 ## Description
-In this project, I created a portfolio to display my completed web development projects. This was built using HTML and CSS.
+In this project, I created a portfolio to display my completed web development projects. This was built using HTML and CSS, and the style layout is mobile-first.
 
 The navigation links in the header scroll the page to the appropriate sections.
 
