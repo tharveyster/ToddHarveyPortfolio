@@ -1,4 +1,4 @@
-# ToddHarveyPortfolio
+# Todd Harvey's Portfolio
 
 ## Description
 In this project, I created a portfolio to display my completed web development projects. This was built using HTML and CSS.
