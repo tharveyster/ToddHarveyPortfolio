@@ -22,9 +22,9 @@ p {
 /* header section */
 header {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     height: 100px;
-    padding: 28px 10px;
+    padding: 20px 10px;
     color: #ccc;
     background: url("../images/todd.jpg") no-repeat left top;
     background-size: 100px;
@@ -33,17 +33,19 @@ header {
 
 header h1 {
     display: inline-block;
-    font-size: 42px;
+    font-size: 30px;
     padding-left: 100px;
+    text-align: center;
 }
 
 /* navigation bar */
 nav {
     display: flex;
     flex: 1 1 40%;
-    justify-content: flex-end;
+    justify-content: center;
     padding-top: 12px;
-    font-size: 20px;
+    padding-left: 100px;
+    font-size: 14px;
 }
 
 nav ul {
@@ -87,19 +89,21 @@ main {
 }
 
 .block-title {
-    width: 20%;
-    border-right: 5px solid gray;
-    text-align: right;
-    padding: 0 20px 0 0 ;
+    width: 100%;
+    border-right: 0;
+    border-bottom: 5px solid gray;
+    text-align: left;
+    padding: 0 0 5px 0 ;
+    margin-bottom: 10px;
 }
 
 .block-title h2 {
-    font-size: 28px;
+    font-size: 18px;
 }
 
 .block-content {
-    width: 80%;
-    padding-left: 30px;
+    width: 100%;
+    padding-left: 0;
 }
 
 .block-content img {
@@ -123,17 +127,17 @@ main {
 
 /* formatting for the remaining projects */
 .secondary-left-block {
-    width: 50%;
+    width: 80%;
     height: 80%;
     padding: 0 10px 20px 0;
-    float: left;
+    float: none;
     clear: both;
 }
 
 .secondary-right-block {
-    width: 50%;
-    padding: 0  0 20px 10px;
-    float: right;
+    width: 80%;
+    padding: 0 10px 20px 0;
+    float: none;
 }
 
 .secondary-project {
@@ -150,12 +154,12 @@ main {
     left: 0;
     bottom: 20px;
     padding: 10px;
-    font-size: 16px;
+    font-size: 12px;
 }
 
 .project-title h3 {
     margin-bottom: 10px;
-    font-size: 20px;
+    font-size: 16px;
 }
 
 .project-title a {
@@ -168,16 +172,13 @@ main {
 
 /* contact me section */
 .contact-info {
-    display: inline;
+    display: block;
+    margin-bottom: 20px;
 }
 
 .contact-info span {
     padding-bottom: 1px;
     border-bottom: 3px solid gray;
-}
-
-.contact-info:not(:last-child) {
-    padding-right: 28px;
 }
 
 .contact-info a {
@@ -196,77 +197,15 @@ footer {
     text-align: center;
 }
 
-@media screen and (max-width: 768px) {
-    /* stack header elements */
+@media screen and (min-width: 500px) {
+    /* reduce header elements to fit */
     header {
         flex-direction: column;
         padding: 12px 10px;
     }
 
     header h1 {
-        text-align: center;
-    }
-
-    nav {
-        justify-content: center;
-        padding-left: 100px;
-        font-size: 16px;
-    }
-
-    nav ul li {
-        margin-left: 10px;
-        margin-right: 10px;
-    }
-
-    /* reduce spacing between elements */
-    .block-title {
-        padding: 0 10px 0 0 ;
-    }
-    
-    .block-content {
-        padding-left: 10px;
-    }
-
-    .block-title h2 {
-        font-size: 18px;
-    }
-
-    /* stack projects */
-    .secondary-left-block {
-        width: 80%;
-        padding-right: 0;
-        float: none;
-    }
-    
-    .secondary-right-block {
-        width: 80%;
-        padding-left: 0;
-        float: none;
-    }
-    
-    .project-title {
-        font-size: 12px;
-    }
-
-    .project-title h3 {
-        font-size: 16px;
-    }
-
-    /* stack contact methods */
-    .contact-info {
-        display: block;
-        margin-bottom: 20px;
-    }
-}
-
-@media screen and (max-width: 500px) {
-    /* reduce header elements to fit */
-    header {
-        padding: 20px 10px;
-    }
-
-    header h1 {
-        font-size: 30px;
+        font-size: 42px;
     }
     
     nav {
@@ -280,16 +219,84 @@ footer {
 
     /* reposition elements to best use available space */
     .block-title {
-        width: 100%;
-        border-right: 0;
-        border-bottom: 5px solid gray;
-        text-align: left;
-        padding: 0 0 5px 0 ;
-        margin-bottom: 10px;
+        width: 20%;
+        border-right: 5px solid gray;
+        border-bottom: 0;
+        text-align: right;
+        padding: 0 10px 0 0 ;
     }
 
     .block-content {
-        width: 100%;
+        width: 80%;
+        padding-left: 10px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    /* stack header elements */
+    header {
+        flex-direction: row;
+        height: 100px;
+        padding: 28px 10px;
+    }
+
+    header h1 {
+        display: inline-block;
+        padding-left: 100px;
+    }
+
+    nav {
+        justify-content: flex-end;
+        padding-top: 12px;
         padding-left: 0;
+        font-size: 20px;
+    }
+
+    nav ul li {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    /* reduce spacing between elements */
+    .block-title {
+        padding: 0 20px 0 0 ;
+    }
+    
+    .block-content {
+        padding-left: 30px;
+    }
+
+    .block-title h2 {
+        font-size: 28px;
+    }
+
+    /* stack projects */
+    .secondary-left-block {
+        width: 50%;
+        padding: 0 10px 20px 0;
+        float: left;
+    }
+    
+    .secondary-right-block {
+        width: 50%;
+        padding: 0 0 20px 10px;
+        float: right;
+    }
+    
+    .project-title {
+        font-size: 16px;
+    }
+
+    .project-title h3 {
+        font-size: 20px;
+    }
+
+    /* stack contact methods */
+    .contact-info {
+        display: inline;
+    }
+
+    .contact-info:not(:last-child) {
+        padding-right: 18px;
     }
 }
