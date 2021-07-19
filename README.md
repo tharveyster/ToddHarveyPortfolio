@@ -1,7 +1,7 @@
 # ToddHarveyPortfolio
 
 ## Description
-In this project, I created a portfolio to display my completed web development projects.
+In this project, I created a portfolio to display my completed web development projects. This was built using HTML and CSS.
 
 The navigation links in the header scroll the page to the appropriate sections.
 
