@@ -6,6 +6,7 @@
 The project can be viewed at <https://tharveyster.github.io/ToddHarveyPortfolio/>.
 
 ## Screenshot
+![Todd Harvey's Portfolio provides web development information about Todd Harvey.](./assets/images/toddharveyportfolio.png)
 
 ## License
 Copyright 2021 Todd Harvey
