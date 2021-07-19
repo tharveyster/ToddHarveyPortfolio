@@ -3,6 +3,7 @@
 ## Description
 
 ## Project Link
+The project can be viewed at <https://tharveyster.github.io/ToddHarveyPortfolio/>.
 
 ## Screenshot
 
