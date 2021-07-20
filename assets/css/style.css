@@ -188,12 +188,12 @@ main {
 
 .project-title .git {
     color: #0a2c6b;
-    padding: 0 0 5px 10px;
+    padding: 5px 0 5px 10px;
     background-color: gray;
 }
 
 .project-title .git:hover {
-    color: white;
+    color: lightskyblue;
 }
 
 /* contact me section */
