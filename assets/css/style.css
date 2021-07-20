@@ -111,17 +111,6 @@ main {
     padding-left: 0;
 }
 
-.block-content img {
-    display: block;
-    width: 100%;
-    opacity: 0.5;
-    transition: opacity 300ms linear;
-}
-
-.block-content img:hover {
-    opacity: 1.0;
-}
-
 /* formatting for the most recent project */
 .primary-project {
     border: 5px solid #0a2c6b;
@@ -150,6 +139,17 @@ main {
     position: relative;
 }
 
+.project-image {
+    display: block;
+    width: 100%;
+    opacity: 0.5;
+    transition: opacity 300ms linear;
+}
+
+.project-image:hover {
+    opacity: 1.0;
+}
+
 /* title bar that appears on each project */
 .project-title {
     display: inline;
@@ -158,8 +158,13 @@ main {
     position: absolute;
     left: 0;
     bottom: 20px;
-    padding: 10px;
     font-size: 12px;
+    border-right: 2px solid #0a2c6b;
+    border-bottom: 2px solid #0a2c6b;
+}
+
+.project-image:hover ~ .project-title {
+    opacity: 1.0;
 }
 
 .project-title h3 {
@@ -168,11 +173,27 @@ main {
 }
 
 .project-title a {
+    display:block;
+    color:white;
+    padding:10px;
+}
+
+.project-title .project-link:hover {
     color: lightskyblue;
 }
 
-.project-title a:hover {
-    color: lightyellow;
+.image-link:hover + .project-title .project-link {
+    color: lightskyblue;
+}
+
+.project-title .git {
+    color: #0a2c6b;
+    padding: 0 0 5px 10px;
+    background-color: gray;
+}
+
+.project-title .git:hover {
+    color: white;
 }
 
 /* contact me section */
