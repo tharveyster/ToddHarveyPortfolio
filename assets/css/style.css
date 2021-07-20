@@ -179,11 +179,11 @@ main {
 }
 
 .project-title .project-link:hover {
-    color: lightskyblue;
+    color: cornflowerblue;
 }
 
 .image-link:hover + .project-title .project-link {
-    color: lightskyblue;
+    color: cornflowerblue;
 }
 
 .project-title .git {
